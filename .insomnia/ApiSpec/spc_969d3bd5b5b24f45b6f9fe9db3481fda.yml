@@ -1,7 +1,7 @@
 _id: spc_969d3bd5b5b24f45b6f9fe9db3481fda
 type: ApiSpec
 parentId: wrk_3d004d7273a843b1ac375a02362f624e
-modified: 1625412272794
+modified: 1625424794515
 created: 1625323789843
 fileName: pelobairro-py-api-docs.yaml
 contents: "openapi: 3.0.3
@@ -131,7 +131,7 @@ contents: "openapi: 3.0.3
 
   \          required: false
 
-  \          default: 3
+  \          example: 3
 
   \          schema:
 
