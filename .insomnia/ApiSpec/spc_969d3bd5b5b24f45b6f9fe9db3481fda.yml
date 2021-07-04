@@ -1,0 +1,163 @@
+_id: spc_969d3bd5b5b24f45b6f9fe9db3481fda
+type: ApiSpec
+parentId: wrk_3d004d7273a843b1ac375a02362f624e
+modified: 1625411825465
+created: 1625323789843
+fileName: pelobairro-py-api-docs.yaml
+contents: "openapi: 3.0.3
+
+  info:
+
+  \  title: PeloBairro Python API
+
+  \  description: API Desenvolvida para a HACKABIP 2021 para o projeto Pelo
+  Bairro. Essa API que retorna informações de múltiplas bases de dados abertas
+  da Câmara Municipal de Lisboa\ 
+
+  \  version: 1.0.0
+
+  servers:
+
+  \  - url: http://localhost:5000
+
+  \    description: local development
+
+  components:
+
+  \  schemas:
+
+  \    bikeObject:
+
+  \      type: object
+
+  \      description: Objeto de retorno de uma informação sobre bicicleta.
+
+  \      properties:
+
+  \        distance:
+
+  \          type: integer
+
+  \          format: int32
+
+  \          description: Distância em Km
+
+  \        lat:
+
+  \          type: number
+
+  \          format: float
+
+  \          description: Latitude
+
+  \        lng:
+
+  \          type: number
+
+  \          format: float
+
+  \          description: Longitude
+
+  \        name:
+
+  \          type: string
+
+  \          description: Nome de exibação da informação
+
+  \        type:\ 
+
+  \          type: string
+
+  \          description: \"Tipo de informação (HOTSPOT: Estacionamento com
+  Hotspot; BICICLETA: Estacionamento, GIRABIKE: Bicicleta do projeto GIRA,
+  BEBEDOURO: Bebedouro )\"
+
+  \          enum:
+
+  \          - HOTSPOT
+
+  \          - ESTACIONAMENTO
+
+  \          - GIRABIKE
+
+  \          - BEBEDOURO
+
+  paths:
+
+  \  /bikes:
+
+  \    get:
+
+  \      tags:\ 
+
+  \        - Bikes
+
+  \      summary: Retorna informações relacionadas com bicicletas
+
+  \      description: Retorna informações relacionadas com bicicletas com base
+  na latitude, longitude e distância máxima informados.
+
+  \      parameters:
+
+  \        - name: lat
+
+  \          in: query
+
+  \          description: Latitude
+
+  \          required: true
+
+  \          schema:
+
+  \            type: number
+
+  \        - name: lng
+
+  \          in: query
+
+  \          description: Longitude
+
+  \          required: true
+
+  \          schema:
+
+  \            type: number
+
+  \        - name: max
+
+  \          in: query
+
+  \          description: Distância Máxima em Km
+
+  \          required: false
+
+  \          default: 3
+
+  \          schema:
+
+  \            type: integer
+
+  \      responses:
+
+  \        '200':
+
+  \          description: Infomações encontradas com base na localização
+
+  \          content:
+
+  \            application/json:
+
+  \              schema:
+
+  \                type: array
+
+  \                items:\ 
+
+  \                  $ref: '#/components/schemas/bikeObject'
+
+  \                 \ 
+
+  \       \ 
+
+  \    "
+contentType: yaml

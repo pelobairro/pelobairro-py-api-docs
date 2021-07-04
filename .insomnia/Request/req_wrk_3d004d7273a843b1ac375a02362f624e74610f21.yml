@@ -1,0 +1,33 @@
+_id: req_wrk_3d004d7273a843b1ac375a02362f624e74610f21
+type: Request
+parentId: wrk_3d004d7273a843b1ac375a02362f624e
+modified: 1625411861387
+created: 1625411825458
+url: "{{ base_url }}/bikes"
+name: Retorna informações relacionadas com bicicletas
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: lat
+    disabled: true
+    value: "0"
+    id: pair_a154c7045a9c491990a1bcd4067d0bd4
+  - name: lng
+    disabled: true
+    value: "0"
+    id: pair_a9af6e0eab1e49568dc37e1967ae0028
+  - name: max
+    disabled: false
+    value: "1"
+    id: pair_05e937f4509946f68e3d16e3a53007f6
+headers: []
+authentication: {}
+metaSortKey: -1625411825458
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
